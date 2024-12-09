@@ -1,0 +1,148 @@
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: url(gambar/laundry3.jpg) no-repeat center center/cover;
+    background-position: center;
+
+    width: 100%;
+    height: 47rem;
+    margin-bottom: 3rem;
+    object-fit: cover;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: orange;
+}
+
+header {
+    position: relative;
+    padding: 0 2rem;
+}
+
+.Navbar {
+    height: 100px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Navbar .logo a {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.Navbar .links {
+    display: flex;
+    gap: 2rem;
+}
+
+.btn {
+    background: orange;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    color: #fff;
+    scale: 1.05;
+}
+
+.wraper {
+    margin: 120px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+}
+
+.toggle-btn {
+    color: #fff;
+    scale: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.dropdown {
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0px;
+    width: 300px;
+    background: rgba(225, 225, 225, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown .btn {
+    width: 100%;
+    text-align: center;
+}
+
+.hero {
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: orange;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 992px) {
+
+    .Navbar .links,
+    .Navbar .btn {
+        display: none;
+    }
+
+    .toggle-btn {
+        display: block;
+    }
+
+    .dropdown.show {
+        height: 240px;
+    }
+}
+
+@media (max-width: 576px) {
+    .dropdown {
+        left: 2rem;
+        width: unset;
+    }
+}
